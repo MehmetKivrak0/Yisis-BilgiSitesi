@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>XR LAB - Extended Reality Araştırma Laboratuvarı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+   
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">YİSİS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Yangın İhbar Sistemi</h1>
+                <p class="hero-subtitle">Yapay zeka ve konum teknolojilerini kullanarak yangın ihbarlarını hızlandıran bir acil durum sistemidir.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-secondary" onclick="scrollToSection('team')">Ekibimizle Tanış</button>
+                </div>
+            </div>
+            <div class="hero-images">
+                
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="image/xxx.png" alt="XR LAB Logo" class="hero-logo xrlab-logo">
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="image/yisis.png" alt="YİSİS Logo" class="hero-logo yisis-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Info Section -->
+    <section class="project-info">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-title-card">
+                    <div class="title-icon">
+                        <i class="fas fa-fire-flame-curved"></i>
+                    </div>
+                    <div class="title-content">
+                        <span class="project-label">Proje Adı</span>
+                        <h2 class="project-name">YİSİS - Yangın İhbar Sistemi</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-details">
+                <div class="info-card main-info">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Proje Amacı</h3>
+                        <p>YiSiS, vatandaşların orman ve ev yangınlarını anlık olarak konum ve fotoğrafla bildirmesini sağlayan bir acil durum sistemidir. Açık kaynaklı haritalar ve bilgilendirme içerikleriyle desteklenen mobil uygulama, yangınla mücadele sürecini hızlandırır.</p>
+                        
+                        <div class="project-features">
+                            <h4>Projenin Öne Çıkan Özellikleri</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Anlık Bildirim</strong>
+                                        <span>Gerçek zamanlı yangın ihbarı</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>GPS Konum</strong>
+                                        <span>Hassas konum belirleme</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Fotoğraf Desteği</strong>
+                                        <span>Görsel kanıt gönderimi</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <strong>Açık Kaynak</strong>
+                                        <span>Ücretsiz ve erişilebilir</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Platform</span>
+                            <span class="stat-desc">Mobil & Web</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">GPS</span>
+                            <span class="stat-label">Konum</span>
+                            <span class="stat-desc">Anlık Takip</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Aktif</span>
+                            <span class="stat-desc">Kesintisiz Hizmet</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">SSL</span>
+                            <span class="stat-label">Güvenlik</span>
+                            <span class="stat-desc">Şifreli İletişim</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Kullanıcı</span>
+                            <span class="stat-desc">Aktif Kayıt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+                         <h2 class="section-title">Proje Ekibi</h2>
+            <div class="team-grid">
+                
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/burak.png" alt="Doç. Dr. Lab Müdürü" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Burak Efe Kılıç</h4>&nbsp;&nbsp;&nbsp;
+                     <p>Frontend Developer</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <div class="member-social">
+                         <a href="mailto:burakxff@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/burakgilic" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/burak-efe-kili%C3%A7-808863230/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/fevzi.jpg" alt="Yüksek Lisans Öğrencisi" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Fevzi Bağrıaçık </h4>&nbsp;&nbsp;
+                     <p>Backend Developer</p>&nbsp;&nbsp;&nbsp;
+                     <div class="member-social">
+                         <a href="mailto:fevzi.bagriacik1905@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/fevzibagriacik" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/fevzi-ba%C4%9Fr%C4%B1a%C3%A7%C4%B1k-401252248/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/kerem.jpg" alt="Proje Koordinatörü" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Kerem Işık </h4>&nbsp;&nbsp;
+                     <p>Siber Güvenlik Uzmanı</p>&nbsp;&nbsp;&nbsp;
+                     <div class="member-social">
+                         <a href="mailto:keremisik1010@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/keremmisik" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/keremisik/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/Mehmet.jpg" alt="Veri Analisti" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Mehmet Kıvrak</h4>&nbsp;&nbsp;
+                     <p>Frontend Developer</p>&nbsp;&nbsp;&nbsp;&nbsp;
+                     <div class="member-social">
+                         <a href="mailto:kivr.mehmet@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/MehmetKivrak0" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/mehmet-k%C4%B1vrak-41b231228/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/mirac.jpg" alt="Teknik Destek Uzmanı" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Miraç Doğan</h4>&nbsp;&nbsp;
+                     <p>Full Stack Developer</p>&nbsp;
+                     <div class="member-social">
+                         <a href="mailto:miracdogan7247@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/miracdogann/" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/mira%C3%A7-do%C4%9Fan-194086263/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                     <div class="member-avatar">
+                         <img src="image/team/tolga.jpg" alt="UI/UX Tasarımcısı" class="member-photo">
+                         <div class="member-overlay">
+                             <i class="fas fa-user"></i>
+                         </div>
+                     </div>
+                     <h4>Tolga Yılmaz</h4>&nbsp;&nbsp;
+                     <p>Mobil Uygulama Geliştirici</p>&nbsp; 
+                     <div class="member-social">
+                         <a href="mailto:tolgayasd97@gmail.com" class="social-link email">
+                             <i class="fas fa-envelope"></i>
+                         </a>
+                         <a href="https://github.com/TolgaYlmaz" target="_blank" class="social-link github">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <a href="https://www.linkedin.com/in/tolga-yilmaz-424b8b2a5/" target="_blank" class="social-link linkedin">
+                             <i class="fab fa-linkedin"></i>
+                         </a>
+                     </div>
+                 </div>
+                 <div class="team-member">
+                    <div class="member-avatar">
+                        <img src="image/team/barıs.jpg" alt="Dr. Araştırma Görevlisi" class="member-photo">
+                        <div class="member-overlay">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>Doç.Dr. Barış Çukurbaşı</h4>
+                    <p>Proje Danışmanı</p>&nbsp;&nbsp;
+                    <div class="member-social">
+                        <a href="mailto:bariscukurbasi@gmail.com" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/barocraft/" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mobile/Desktop Versions -->
+    <section class="versions-section">
+        <div class="container">
+                         <h2 class="section-title">Kullandığımız Teknolojiler</h2>
+            <div class="versions-grid">
+                <div class="version-card mobile">
+                    <div class="version-image">
+                        <img src="image/tecno/rtnat.png" alt="Mobil XR" class="tech-photo">
+                        <div class="tech-overlay">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <h3>React Native</h3>
+                    <p> Tek kodla iOS ve Android için yerel uygulamalar geliştirir.</p>
+                </div>
+                <div class="version-card desktop">
+                    <div class="version-image">
+                        <img src="image/tecno/react.png" alt="PC-VR Sistemleri" class="tech-photo">
+                        <div class="tech-overlay">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <h3>React </h3>
+                    <p>Web tabanlı uygulamalar geliştirmek için kullanılan bir JavaScript kütüphanesidir.</p>
+                </div>
+                <div class="version-card tablet">
+                    <div class="version-image">
+                        <img src="image/tecno/sqll.jpg" alt="Standalone VR" class="tech-photo">
+                        <div class="tech-overlay">
+                            <i class="fa-solid fa-database"></i>                       
+                         </div>
+                    </div>
+                    <h3>SQL-Lİte</h3>
+                    <p>Mobil ve masaüstü uygulamalarda yerel veri depolamak için kullanılan, tek dosyalı ve sunucusuz bir veritabanıdır.</p>
+                </div>
+                <div class="version-card cloud">
+                    <div class="version-image">
+                        <img src="image/tecno/python.png" alt="Bulut XR" class="tech-photo">
+                        <div class="tech-overlay">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Yapay zeka, veri analizi, web geliştirme ve masaüstü uygulamalar gibi birçok alanda kullanılan bir programlama dilidir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDG Research Areas Section -->
+    <section id="features" class="sdg-section">
+        <div class="container">
+            <div class="sdg-header">
+                <h2 class="section-title">Sürdürülebilir Kalkınma Hedeflerine Katkımız</h2>
+                <p class="sdg-subtitle">YİSİS, Birleşmiş Milletler Sürdürülebilir Kalkınma Hedefleri'ne doğrudan katkı sağlar</p>
+            </div>
+            <div class="sdg-grid">
+                <div class="sdg-card sdg-3">
+                    <div class="sdg-image-section">
+                        <img src="image/sdg/sdg3.png" alt="SDG 3 Logo" class="sdg-logo-image">
+                    </div>
+                    <div class="sdg-title-section">
+                        <h4>Sağlıklı Ve Kaliteli Yaşam</h4>
+                        <div class="percentage-circle sdg-3-circle">65%</div>
+                    </div>
+                    <div class="sdg-subtitle">Her Yaştan İnsan İçin Refah</div>
+                    <div class="sdg-description">
+                        İş kazalarını önleyerek çalışanların sağlıklı ve güvenli çalışma ortamlarında bulunmalarını sağlıyoruz. Gerçek zamanlı risk tespiti ile yaralanma ve ölüm oranlarını azaltıyoruz.
+                    </div>
+                    <div class="sdg-targets">
+                        <div class="target-item">• Hedef 3.6: Trafik ve iş kazası ölümlerini azaltma</div>
+                        <div class="target-item">• Hedef 3.9: Tehlikeli kimyasal ve kirletici madde kaynaklı hastalıkları azaltma</div>
+                    </div>
+                </div>
+
+                <div class="sdg-card sdg-11">
+                    <div class="sdg-image-section">
+                        <img src="image/sdg/sdg11.png" alt="SDG 11 Logo" class="sdg-logo-image">
+                    </div>
+                    <div class="sdg-title-section">
+                        <h4>Sürdürülebilir Şehirler Ve Topluluklar</h4>
+                        <div class="percentage-circle sdg-11-circle">45%</div>
+                    </div>
+                    <div class="sdg-subtitle">Güvenli, Esnek ve Sürdürülebilir Şehirler</div>
+                    <div class="sdg-description">
+                        Endüstriyel alanların güvenliğini artırarak sürdürülebilir şehir gelişimine katkıda bulunuyoruz. Akıllı şehir teknolojilerinin bir parçası olarak güvenli çalışma alanları oluşturuyoruz.
+                    </div>
+                    <div class="sdg-targets">
+                        <div class="target-item">• Hedef 11.3: Sürdürülebilir şehirleşme ve katılımcı planlama</div>
+                        <div class="target-item">• Hedef 11.5: Afet kaynaklı ölüm ve ekonomik kayıpları azaltma</div>
+                    </div>
+                </div>
+
+                <div class="sdg-card sdg-13">
+                    <div class="sdg-image-section">
+                        <img src="image/sdg/sdg13.png" alt="SDG 13 Logo" class="sdg-logo-image">
+                    </div>
+                    <div class="sdg-title-section">
+                        <h4>İklim Eylemi</h4>
+                        <div class="percentage-circle sdg-13-circle">75%</div>
+                    </div>
+                    <div class="sdg-subtitle">Sürdürülebilir Sanayileşme ve Yenilikçilik</div>
+                    <div class="sdg-description">
+                        Yapay zeka ve bilgisayarlı görü teknolojileriyle endüstriyel altyapıyı modernize ediyoruz. Akıllı fabrika konseptine katkıda bulunarak sürdürülebilir sanayileşmeyi destekliyoruz.
+                    </div>
+                    <div class="sdg-targets">
+                        <div class="target-item">• Hedef 13.1: İklim değişikliği etkilerine uyum ve dirençlilik geliştirme</div>
+                        <div class="target-item">• Hedef 13.3: İklim değişikliği konusunda eğitim ve farkındalık artırma</div>
+                    </div>
+                </div>
+
+                <div class="sdg-card sdg-15">
+                    <div class="sdg-image-section">
+                        <img src="image/sdg/sdg15.webp" alt="SDG 15 Logo" class="sdg-logo-image">
+                    </div>
+                    <div class="sdg-title-section">
+                        <h4>Karasal Yaşam</h4>
+                        <div class="percentage-circle sdg-15-circle">85%</div>
+                    </div>
+                    <div class="sdg-subtitle">Herkes İçin Sürdürülebilir Orman Koruma</div>
+                    <div class="sdg-description">
+                        Orman yangınlarının erken tespiti ile doğa korunması sağlanır ve biyoçeşitlilik kayıpları önlenir. Yapay zeka teknolojileriyle çevre koruma sistemlerini destekliyoruz.
+                    </div>
+                    <div class="sdg-targets">
+                        <div class="target-item">• Hedef 15.1: Orman ekosistemlerinin korunması ve sürdürülebilir kullanımı</div>
+                        <div class="target-item">• Hedef 15.5: Biyolojik çeşitliliğin kaybını durdurma</div>
+                    </div>
+                </div>
+
+                <div class="sdg-card sdg-16">
+                    <div class="sdg-image-section">
+                        <img src="image/sdg/sdg16.png" alt="SDG 16 Logo" class="sdg-logo-image">
+                    </div>
+                    <div class="sdg-title-section">
+                        <h4>Barış ve Adalet</h4>
+                        <div class="percentage-circle sdg-16-circle">70%</div>
+                    </div>
+                    <div class="sdg-subtitle">Güçlü Kurumlar ve Şeffaf Yönetim</div>
+                    <div class="sdg-description">
+                        Şeffaf veri paylaşımı ve güvenilir bilgi sistemi ile toplumsal güven artırılır ve etkin yönetim sağlanır. Açık kaynak teknolojilerle erişilebilir çözümler sunuyoruz.
+                    </div>
+                    <div class="sdg-targets">
+                        <div class="target-item">• Hedef 16.6: Etkili, hesap verebilir ve şeffaf kurumlar geliştirme</div>
+                        <div class="target-item">• Hedef 16.10: Bilgiye erişimi garanti altına alma</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Mobile App Gallery -->
+    <section class="mobile-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Mobil Uygulama Görselleri</h2>
+            <div class="mobile-gallery-grid">
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/8.jpg" alt="Mobil Uygulama Ekranı 1" class="gallery-image" data-caption="Giriş Ekranı - Kullanıcı Doğrulama">
+                        <span>Giriş Ekranı - Kullanıcı Doğrulama</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/5.jpg" alt="Mobil Uygulama Ekranı 2" class="gallery-image" data-caption="İnteraktif Harita - Yangın Lokasyonları">
+                        <span>İnteraktif Harita - Yangın Lokasyonları</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/yangınihbar.jpg" alt="Mobil Uygulama Ekranı 3" class="gallery-image" data-caption="Acil Yangın İhbar Formu">
+                        <span>Acil Yangın İhbar Formu</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/adres.jpg" alt="Mobil Uygulama Ekranı 5" class="gallery-image" data-caption="GPS Konum Belirleme Sistemi">
+                        <span>GPS Konum Belirleme Sistemi</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/1.jpg" alt="Mobil Uygulama Ekranı 6" class="gallery-image" data-caption="Aktif Yangın Bildirim Listesi">
+                        <span>Aktif Yangın Bildirim Listesi</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/2.jpg" alt="Mobil Uygulama Ekranı 4" class="gallery-image" data-caption="Uygulama Kullanım Kılavuzu">
+                        <span>Uygulama Kullanım Kılavuzu</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/4.jpg" alt="Mobil Uygulama Ekranı 7" class="gallery-image" data-caption="Proje ve Takım Bilgileri">
+                        <span>Proje ve Takım Bilgileri</span>
+                    </div>
+                </div>
+                <div class="gallery-item mobile-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/mobıl/3.jpg" alt="Mobil Uygulama Ekranı 8" class="gallery-image" data-caption="Kullanıcı Profil Yönetimi">
+                        <span>Kullanıcı Profil Yönetimi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Web App Gallery -->
+    <section class="web-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Web Sayfası Görselleri</h2>
+            <div class="web-gallery-grid">
+                <div class="gallery-item web-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/ansyf.png" alt="Web Sayfası 1" class="gallery-image" data-caption="Anasayfa">
+                        <span>Anasayfa</span>
+                    </div>
+                </div>
+                <div class="gallery-item web-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/map.png" alt="Web Sayfası 2" class="gallery-image" data-caption="Yangın Takip Haritası">
+                        <span>Yangın Takip Haritası</span>
+                    </div>
+                </div>
+                <div class="gallery-item web-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/sdg.png" alt="Web Sayfası 3" class="gallery-image" data-caption="Sürdürülebilir Hedefleri">
+                        <span>Sürdürülebilir Hedefleri</span>
+                    </div>
+                </div>
+                <div class="gallery-item web-item">
+                    <div class="gallery-placeholder">
+                        <img src="image/hkmd.png" alt="Web Sayfası 4" class="gallery-image" data-caption="Hakkımızda">
+                        <span>Hakkımızda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption">
+                <span id="modalCaption"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <a href="https://www.mcbu.edu.tr/" target="_blank"> <img src="image/2.jpg" alt="MYO Logo" class="footer-logo"> </a>
+                </div>
+                <div class="footer-logo-section-2">
+                    <a href="https://xrlab.cbu.edu.tr/" target="_blank"> <img src="image/xxx.png" alt="MYO Logo" class="footer-logo-2"> </a>
+                </div>
+                <div class="footer-text-section">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
