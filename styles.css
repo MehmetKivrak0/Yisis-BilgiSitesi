@@ -135,7 +135,7 @@ body {
 .hero-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -162,14 +162,17 @@ body {
 
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-top: 50px;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 50%, #e3e7ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    word-spacing: 0.1em;
 }
 
 .hero-subtitle {
@@ -1137,7 +1140,7 @@ body {
 /* Mobile Gallery Section */
 .mobile-gallery-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
 }
 
@@ -1148,8 +1151,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="mobile-grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="60" height="60" fill="url(%23mobile-grid)"/></svg>');
-    opacity: 0.4;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="mobile-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(231,76,60,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23mobile-dots)"/></svg>');
+    opacity: 0.6;
 }
 
 .mobile-gallery-section .container {
@@ -1158,8 +1161,10 @@ body {
 }
 
 .mobile-gallery-section .section-title {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #2c3e50;
+    text-shadow: none;
+    position: relative;
+    z-index: 2;
 }
 
 .mobile-gallery-grid {
@@ -1226,14 +1231,16 @@ body {
     overflow: hidden;
 }
 
-/* Mobile Item Styles - Yeni Tasarım */
+/* Mobile Item Styles - Site Uyumlu Tasarım */
 .mobile-item .gallery-placeholder {
     background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-    border: 2px solid rgba(103, 126, 234, 0.1);
+    border: 2px solid rgba(231, 76, 60, 0.1);
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    transition: all 0.5s ease;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
 }
 
 .mobile-item .gallery-placeholder::before {
@@ -1243,9 +1250,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(145deg, rgba(103, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    background: linear-gradient(145deg, rgba(231, 76, 60, 0.02) 0%, rgba(44, 62, 80, 0.02) 100%);
     z-index: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .mobile-item .gallery-placeholder img {
@@ -1259,6 +1266,31 @@ body {
     filter: contrast(1.05) brightness(1.02) saturate(1.05);
     transition: all 0.3s ease;
     border-radius: 13px 13px 0 0;
+}
+
+/* Mobil Gallery Click Icon */
+.mobile-item .gallery-placeholder::after {
+    content: '\f065';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2.5rem;
+    color: white;
+    background: rgba(231, 76, 60, 0.9);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
 }
 
 /* Text area for mobile */
@@ -1285,7 +1317,7 @@ body {
 /* Fallback ikon for mobile */
 .mobile-item .gallery-placeholder i {
     font-size: 4rem;
-    color: #667eea;
+    color: #e74c3c;
     z-index: 1;
     opacity: 0.6;
     position: absolute;
@@ -1296,22 +1328,28 @@ body {
 
 /* Hover Effects for Mobile */
 .mobile-item:hover .gallery-placeholder {
-    border-color: rgba(103, 126, 234, 0.3);
-    transform: translateY(-2px);
+    border-color: rgba(231, 76, 60, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.15);
 }
 
 .mobile-item:hover .gallery-placeholder::before {
-    background: linear-gradient(145deg, rgba(103, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    background: linear-gradient(145deg, rgba(231, 76, 60, 0.06) 0%, rgba(44, 62, 80, 0.06) 100%);
+}
+
+.mobile-item:hover .gallery-placeholder::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .mobile-item:hover .gallery-placeholder img {
-    transform: scale(1.05);
-    filter: contrast(1.15) brightness(1.05) saturate(1.2);
+    transform: scale(1.02);
+    filter: contrast(1.1) brightness(1.02) saturate(1.1) blur(1px);
 }
 
 .mobile-item:hover .gallery-placeholder span {
-    color: #667eea;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+    color: #e74c3c;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
     font-weight: 700;
 }
 
@@ -1321,8 +1359,10 @@ body {
     border: 2px solid rgba(231, 76, 60, 0.1);
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    transition: all 0.5s ease;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
 }
 
 .web-item .gallery-placeholder::before {
@@ -1334,7 +1374,32 @@ body {
     bottom: 0;
     background: linear-gradient(145deg, rgba(231, 76, 60, 0.03) 0%, rgba(192, 57, 43, 0.03) 100%);
     z-index: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+/* Web Gallery Click Icon */
+.web-item .gallery-placeholder::after {
+    content: '\f065';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2.5rem;
+    color: white;
+    background: rgba(231, 76, 60, 0.9);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
 }
 
 .web-item .gallery-placeholder img {
@@ -1386,21 +1451,27 @@ body {
 /* Hover Effects */
 .web-item:hover .gallery-placeholder {
     border-color: rgba(231, 76, 60, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.15);
 }
 
 .web-item:hover .gallery-placeholder::before {
     background: linear-gradient(145deg, rgba(231, 76, 60, 0.08) 0%, rgba(192, 57, 43, 0.08) 100%);
 }
 
+.web-item:hover .gallery-placeholder::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .web-item:hover .gallery-placeholder img {
-    transform: scale(1.05);
-    filter: contrast(1.15) brightness(1.05) saturate(1.2);
+    transform: scale(1.02);
+    filter: contrast(1.1) brightness(1.02) saturate(1.1) blur(1px);
 }
 
 .web-item:hover .gallery-placeholder span {
     color: #e74c3c;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
     font-weight: 700;
 }
 
@@ -1653,11 +1724,13 @@ body {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
-        padding: 0 1.5rem;
+        padding: 3rem 1.5rem 0 1.5rem;
     }
 
     .hero-title {
         font-size: clamp(2rem, 6vw, 3rem);
+        margin-top: 20px;
+        line-height: 1.4;
     }
 
     .hero-subtitle {
@@ -1827,13 +1900,16 @@ body {
     }
 
     .hero-container {
-        padding: 0 1rem;
+        padding: 4rem 1rem 0 1rem;
         gap: 2rem;
     }
 
     .hero-title {
         font-size: clamp(1.8rem, 8vw, 2.5rem);
+        margin-top: 10px;
         margin-bottom: 1rem;
+        line-height: 1.5;
+        padding-top: 5px;
     }
 
     .hero-subtitle {
