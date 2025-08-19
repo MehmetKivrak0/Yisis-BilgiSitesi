@@ -434,7 +434,7 @@ body {
 .project-stats {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
 .stat-item {
@@ -1060,6 +1060,9 @@ body {
 .sdg-targets {
     margin-top: 1.5rem;
 }
+.sdg-targetss {
+    margin-top: 3.0rem;
+}
 
 .target-item {
     color: #3182ce;
@@ -1195,7 +1198,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
@@ -1213,6 +1216,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     min-height: 300px;
     margin: 0;
+    cursor: pointer;
 }
 
 .gallery-item:hover {
@@ -1291,6 +1295,7 @@ body {
     opacity: 0;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    pointer-events: none;
 }
 
 /* Text area for mobile */
@@ -1400,6 +1405,7 @@ body {
     opacity: 0;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    pointer-events: none;
 }
 
 .web-item .gallery-placeholder img {
@@ -1500,7 +1506,7 @@ body {
     max-width: 90%;
     max-height: 90%;
     margin: 5% auto;
-    background: #ffffff;
+    background: #6c6c6c;
     border-radius: 15px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -1574,6 +1580,93 @@ body {
     background-color: #003462;
     color: white;
     padding: 60px 0 20px;
+}
+
+/* Web Developer Info Section */
+.web-developer-info {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.web-developer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.web-developer-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.web-developer-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+.web-developer-name {
+    color: #e74c3c;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.web-developer-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.web-developer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.web-developer-link i {
+    font-size: 1rem;
+}
+
+.web-developer-link.email {
+    background: linear-gradient(135deg, #ea4335 0%, #d33b2c 100%);
+}
+
+.web-developer-link.github {
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.web-developer-link.linkedin {
+    background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+}
+
+.web-developer-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.web-developer-link.email:hover {
+    box-shadow: 0 6px 15px rgba(234, 67, 53, 0.4);
+}
+
+.web-developer-link.github:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.web-developer-link.linkedin:hover {
+    box-shadow: 0 6px 15px rgba(0, 119, 181, 0.4);
 }
 
 .footer-content {
@@ -1892,6 +1985,22 @@ body {
     .footer-text-section p {
         font-size: 1rem;
     }
+    
+    /* Web Developer Info Mobile */
+    .web-developer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .web-developer-social {
+        gap: 0.8rem;
+    }
+    
+    .web-developer-link {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2185,6 +2294,42 @@ body {
     
     .footer-text-section p {
         font-size: 1rem;
+    }
+    
+    /* Web Developer Info Small Mobile */
+    .web-developer-info {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .web-developer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .web-developer-text {
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+    }
+    
+    .web-developer-social {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .web-developer-link {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .web-developer-link span {
+        display: none;
+    }
+    
+    .web-developer-link i {
+        font-size: 0.9rem;
     }
 }
 

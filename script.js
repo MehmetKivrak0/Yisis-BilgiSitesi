@@ -81,6 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
             
+            // Add click event to all gallery items (for the entire card)
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Find the image within this gallery item
+                    const img = item.querySelector('.gallery-image');
+                    if (img) {
+                        this.openModal(img);
+                    }
+                });
+                
+                // Add keyboard support for gallery items
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const img = item.querySelector('.gallery-image');
+                        if (img) {
+                            this.openModal(img);
+                        }
+                    }
+                });
+            });
+            
             // Close modal events
             if (this.closeBtn) {
                 this.closeBtn.addEventListener('click', () => {
