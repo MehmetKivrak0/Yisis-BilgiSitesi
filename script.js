@@ -59,15 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
             this.modal = document.getElementById('imageModal');
             this.modalImage = document.getElementById('modalImage');
             this.modalCaption = document.getElementById('modalCaption');
-            this.closeBtn = document.querySelector('.modal-close');
-            this.galleryImages = document.querySelectorAll('.gallery-image');
+            this.closeBtn = this.modal ? this.modal.querySelector('.modal-close') : null;
+            this.prevBtn = this.modal ? this.modal.querySelector('.modal-prev') : null;
+            this.nextBtn = this.modal ? this.modal.querySelector('.modal-next') : null;
+            this.galleryImages = Array.from(document.querySelectorAll('.gallery-image'));
+            this.currentIndex = 0;
             
             this.init();
         }
         
         init() {
             // Add click event to all gallery images
-            this.galleryImages.forEach(img => {
+            this.galleryImages.forEach((img, index) => {
                 img.addEventListener('click', (e) => {
                     this.openModal(e.target);
                 });
@@ -111,6 +114,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             
+            // Prev / Next button events
+            if (this.prevBtn) {
+                this.prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.showPrevImage();
+                });
+            }
+            
+            if (this.nextBtn) {
+                this.nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.showNextImage();
+                });
+            }
+            
             // Close on background click
             if (this.modal) {
                 this.modal.addEventListener('click', (e) => {
@@ -120,10 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             
-            // Close on ESC key
+            // Keyboard events (Close on ESC, Navigate on Arrows)
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && this.modal && this.modal.classList.contains('show')) {
-                    this.closeModal();
+                if (this.modal && this.modal.classList.contains('show')) {
+                    if (e.key === 'Escape') this.closeModal();
+                    if (e.key === 'ArrowLeft') this.showPrevImage();
+                    if (e.key === 'ArrowRight') this.showNextImage();
                 }
             });
         }
@@ -131,11 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(img) {
             if (!this.modal || !this.modalImage || !this.modalCaption) return;
             
-            const src = img.src;
-            const caption = img.dataset.caption || img.alt;
-            
-            this.modalImage.src = src;
-            this.modalCaption.textContent = caption;
+            this.currentIndex = this.galleryImages.indexOf(img);
+            this.updateModalContent();
             
             // Show modal with animation
             this.modal.style.display = 'block';
@@ -150,6 +167,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (this.closeBtn) {
                 this.closeBtn.focus();
             }
+        }
+        
+        updateModalContent() {
+            if (this.currentIndex < 0 || this.currentIndex >= this.galleryImages.length) return;
+            const img = this.galleryImages[this.currentIndex];
+            const src = img.src;
+            const caption = img.dataset.caption || img.alt;
+            
+            this.modalImage.src = src;
+            this.modalCaption.textContent = caption;
+        }
+
+        showPrevImage() {
+            if (this.galleryImages.length === 0) return;
+            this.currentIndex = (this.currentIndex - 1 + this.galleryImages.length) % this.galleryImages.length;
+            this.updateModalContent();
+        }
+
+        showNextImage() {
+            if (this.galleryImages.length === 0) return;
+            this.currentIndex = (this.currentIndex + 1) % this.galleryImages.length;
+            this.updateModalContent();
         }
         
         closeModal() {
@@ -170,6 +209,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Image Modal
     new ImageModal();
+
+    // Partner Modal Functionality
+    const partnerModal = document.getElementById('partnerModal');
+    const partnerModalTitle = document.getElementById('partnerModalTitle');
+    const partnerModalDesc = document.getElementById('partnerModalDesc');
+    const partnerCloseBtn = document.querySelector('.partner-close');
+    const sliderTrack = document.querySelector('.slider-track');
+
+    if (partnerModal && sliderTrack) {
+        document.querySelectorAll('.slide').forEach(slide => {
+            slide.addEventListener('click', () => {
+                const partnerName = slide.getAttribute('data-name');
+                const partnerDesc = slide.getAttribute('data-desc');
+                
+                if (partnerName && partnerDesc) {
+                    partnerModalTitle.textContent = partnerName;
+                    partnerModalDesc.textContent = partnerDesc;
+                    
+                    partnerModal.style.display = 'block';
+                    setTimeout(() => partnerModal.classList.add('show'), 10);
+                    
+                    sliderTrack.classList.add('paused');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        const closePartnerModal = () => {
+            partnerModal.classList.remove('show');
+            setTimeout(() => {
+                partnerModal.style.display = 'none';
+                sliderTrack.classList.remove('paused');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+
+        if (partnerCloseBtn) {
+            partnerCloseBtn.addEventListener('click', closePartnerModal);
+        }
+        
+        partnerModal.addEventListener('click', (e) => {
+            if (e.target === partnerModal) {
+                closePartnerModal();
+            }
+        });
+    }
 
     console.log('ProjeBilgi website loaded successfully!');
 });
