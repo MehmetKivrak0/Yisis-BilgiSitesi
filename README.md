@@ -143,40 +143,28 @@ Yangınla ilgili detayları ve fotoğrafı yükleyin.
 
 Harita üzerinden aktif yangınları ve riskli bölgeleri görüntüleyin.
 
-Proje Ekibi
+## Proje Ekibi
 
+- Eren Ata - Ekip Lideri / Veri Analisti, Risk Haritalama
+- Mehmet Kıvrak - Frontend Developer
+- Miraç Doğan - Backend Developer
+- Fevzi Bağrıaçık - Mobile App Developer
+- Zeynep Divoğlu - Proje Koordinatörü / Saha ve Paydaş İlişkileri
+- Kerem Işık - Cybersecurity Assistant
+- Doç. Dr. Barış Çukurbaşı - Proje Danışmanı
 
+## Proje Hakkında
 
+Bu proje, Manisa Celal Bayar Üniversitesi Manisa Teknik Bilimler Meslek Yüksekokulu Bilgisayar Teknolojisi Bölümü Genişletilmiş Gerçeklik Laboratuvarı (XRLab) bünyesinde planlanmış ve ilk demosu geliştirilmiştir. Projenin nihai yazılımını geliştirme ve yaygınlaştırma çalışmalarına **ESC-30 Projesi** kapsamında başlanmıştır.
 
+**Avrupa Birliği tarafından finanse edilen** ve **2025-3-TR01-ESC30-SOL-0003788** numarası ile yürütülen bu proje; Manisa Celal Bayar Üniversitesi koordinatörlüğünde ve Manisa Teknik Bilimler Meslek Yüksekokulu XRLab desteğiyle gerçekleştirilmektedir. Projede, Ege Üniversitesi paydaş olarak yer almaktadır.
 
-Burak Efe Kılıç - Frontend Developer
+## Paydaş Kurumlar
+- Manisa Celal Bayar Üniversitesi
+- MCBÜ BAUM
 
+## İletişim
 
+Web: [xrlab.cbu.edu.tr](https://xrlab.cbu.edu.tr/)
 
-Fevzi Bağrıaçık - Backend Developer
-
-
-
-Kerem Işık - Siber Güvenlik Uzmanı
-
-
-
-Mehmet Kıvrak - Frontend Developer
-
-
-
-Miraç Doğan - Full Stack Developer
-
-
-
-Tolga Yılmaz - Mobil Uygulama Geliştirici
-
-
-
-Doç. Dr. Barış Çukurbaşı - Proje Danışmanı
-
-Web: xrlab.cbu.edu.tr
-
-
-
-LinkedIn: XR LAB LinkedIn
+E-Posta: xrlab@mcbu.edu.tr
