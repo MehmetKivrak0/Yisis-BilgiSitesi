@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(chromium-cli --session footer)",
+      "Bash(python -c \"import playwright\")",
+      "Bash(pip show *)",
+      "Bash(where.exe msedge *)",
+      "Bash(where.exe chrome *)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --headless --disable-gpu --screenshot=\"C:\\\\Users\\\\mkivr\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mkivr-Documents-GitHub-Yisis-BilgiSitesi\\\\f257da45-39b5-488e-90cb-d5252a77674e\\\\scratchpad\\\\footer.png\" --window-size=1600,3200 \"http://localhost:8123/index.html\")",
+      "PowerShell(powershell -sta -File \"C:\\\\Users\\\\mkivr\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-mkivr-Documents-GitHub-Yisis-BilgiSitesi\\\\f257da45-39b5-488e-90cb-d5252a77674e\\\\scratchpad\\\\shot.ps1\")",
+      "Bash(node -e \"console.log\\(1\\)\")",
+      "Bash(npm ls *)",
+      "Bash(node cdp_shot.mjs)",
+      "Bash(taskkill //F //IM chrome.exe)",
+      "Bash(pkill -f \"http.server 8123\")",
+      "Bash(rm -rf \"C:\\\\Users\\\\mkivr\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\chrome-profile-tmp\")",
+      "Bash(taskkill //F //PID 17544)",
+      "Bash(powershell -Command \"netstat -ano | Select-String ':8123'\")",
+      "Bash(taskkill //F //PID 18908)",
+      "Bash(powershell -Command \"netstat -ano | Select-String ':8123' | Select-Object -First 1\")",
+      "Bash(taskkill //F //PID 18696)",
+      "Bash(node cdp_shot_title.mjs)",
+      "Bash(taskkill //F //PID 13284)"
+    ]
+  }
+}
